@@ -14,28 +14,28 @@
 
 (defclass ultra_sonics::ProximityReading
   :super ros::object
-  :slots (_x_ratation _y_ratation _distance _accuracy ))
+  :slots (_x_rotation _y_rotation _distance _accuracy ))
 
 (defmethod ultra_sonics::ProximityReading
   (:init
    (&key
-    ((:x_ratation __x_ratation) 0)
-    ((:y_ratation __y_ratation) 0)
+    ((:x_rotation __x_rotation) 0)
+    ((:y_rotation __y_rotation) 0)
     ((:distance __distance) 0.0)
     ((:accuracy __accuracy) 0.0)
     )
    (send-super :init)
-   (setq _x_ratation (round __x_ratation))
-   (setq _y_ratation (round __y_ratation))
+   (setq _x_rotation (round __x_rotation))
+   (setq _y_rotation (round __y_rotation))
    (setq _distance (float __distance))
    (setq _accuracy (float __accuracy))
    self)
-  (:x_ratation
-   (&optional __x_ratation)
-   (if __x_ratation (setq _x_ratation __x_ratation)) _x_ratation)
-  (:y_ratation
-   (&optional __y_ratation)
-   (if __y_ratation (setq _y_ratation __y_ratation)) _y_ratation)
+  (:x_rotation
+   (&optional __x_rotation)
+   (if __x_rotation (setq _x_rotation __x_rotation)) _x_rotation)
+  (:y_rotation
+   (&optional __y_rotation)
+   (if __y_rotation (setq _y_rotation __y_rotation)) _y_rotation)
   (:distance
    (&optional __distance)
    (if __distance (setq _distance __distance)) _distance)
@@ -45,9 +45,9 @@
   (:serialization-length
    ()
    (+
-    ;; int16 _x_ratation
+    ;; int16 _x_rotation
     2
-    ;; int16 _y_ratation
+    ;; int16 _y_rotation
     2
     ;; float32 _distance
     4
@@ -58,10 +58,10 @@
    (&optional strm)
    (let ((s (if strm strm
               (make-string-output-stream (send self :serialization-length)))))
-     ;; int16 _x_ratation
-       (write-word _x_ratation s)
-     ;; int16 _y_ratation
-       (write-word _y_ratation s)
+     ;; int16 _x_rotation
+       (write-word _x_rotation s)
+     ;; int16 _y_rotation
+       (write-word _y_rotation s)
      ;; float32 _distance
        (sys::poke _distance (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
      ;; float32 _accuracy
@@ -70,10 +70,10 @@
      (if (null strm) (get-output-stream-string s))))
   (:deserialize
    (buf &optional (ptr- 0))
-   ;; int16 _x_ratation
-     (setq _x_ratation (sys::peek buf ptr- :short)) (incf ptr- 2)
-   ;; int16 _y_ratation
-     (setq _y_ratation (sys::peek buf ptr- :short)) (incf ptr- 2)
+   ;; int16 _x_rotation
+     (setq _x_rotation (sys::peek buf ptr- :short)) (incf ptr- 2)
+   ;; int16 _y_rotation
+     (setq _y_rotation (sys::peek buf ptr- :short)) (incf ptr- 2)
    ;; float32 _distance
      (setq _distance (sys::peek buf ptr- :float)) (incf ptr- 4)
    ;; float32 _accuracy
@@ -82,17 +82,17 @@
    self)
   )
 
-(setf (get ultra_sonics::ProximityReading :md5sum-) "e94f3fd8a5c15e9d20ef07fcc5fd7cf7")
+(setf (get ultra_sonics::ProximityReading :md5sum-) "dbb137e6f965ad94062061ffcffb2bb9")
 (setf (get ultra_sonics::ProximityReading :datatype-) "ultra_sonics/ProximityReading")
 (setf (get ultra_sonics::ProximityReading :definition-)
-      "int16 x_ratation
-int16 y_ratation
+      "int16 x_rotation
+int16 y_rotation
 float32 distance
 float32 accuracy
 ")
 
 
 
-(provide :ultra_sonics/ProximityReading "e94f3fd8a5c15e9d20ef07fcc5fd7cf7")
+(provide :ultra_sonics/ProximityReading "dbb137e6f965ad94062061ffcffb2bb9")
 
 

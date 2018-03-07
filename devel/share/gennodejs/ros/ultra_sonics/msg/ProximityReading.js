@@ -18,23 +18,23 @@ class ProximityReading {
   constructor(initObj={}) {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
-      this.x_ratation = null;
-      this.y_ratation = null;
+      this.x_rotation = null;
+      this.y_rotation = null;
       this.distance = null;
       this.accuracy = null;
     }
     else {
-      if (initObj.hasOwnProperty('x_ratation')) {
-        this.x_ratation = initObj.x_ratation
+      if (initObj.hasOwnProperty('x_rotation')) {
+        this.x_rotation = initObj.x_rotation
       }
       else {
-        this.x_ratation = 0;
+        this.x_rotation = 0;
       }
-      if (initObj.hasOwnProperty('y_ratation')) {
-        this.y_ratation = initObj.y_ratation
+      if (initObj.hasOwnProperty('y_rotation')) {
+        this.y_rotation = initObj.y_rotation
       }
       else {
-        this.y_ratation = 0;
+        this.y_rotation = 0;
       }
       if (initObj.hasOwnProperty('distance')) {
         this.distance = initObj.distance
@@ -53,10 +53,10 @@ class ProximityReading {
 
   static serialize(obj, buffer, bufferOffset) {
     // Serializes a message object of type ProximityReading
-    // Serialize message field [x_ratation]
-    bufferOffset = _serializer.int16(obj.x_ratation, buffer, bufferOffset);
-    // Serialize message field [y_ratation]
-    bufferOffset = _serializer.int16(obj.y_ratation, buffer, bufferOffset);
+    // Serialize message field [x_rotation]
+    bufferOffset = _serializer.int16(obj.x_rotation, buffer, bufferOffset);
+    // Serialize message field [y_rotation]
+    bufferOffset = _serializer.int16(obj.y_rotation, buffer, bufferOffset);
     // Serialize message field [distance]
     bufferOffset = _serializer.float32(obj.distance, buffer, bufferOffset);
     // Serialize message field [accuracy]
@@ -68,10 +68,10 @@ class ProximityReading {
     //deserializes a message object of type ProximityReading
     let len;
     let data = new ProximityReading(null);
-    // Deserialize message field [x_ratation]
-    data.x_ratation = _deserializer.int16(buffer, bufferOffset);
-    // Deserialize message field [y_ratation]
-    data.y_ratation = _deserializer.int16(buffer, bufferOffset);
+    // Deserialize message field [x_rotation]
+    data.x_rotation = _deserializer.int16(buffer, bufferOffset);
+    // Deserialize message field [y_rotation]
+    data.y_rotation = _deserializer.int16(buffer, bufferOffset);
     // Deserialize message field [distance]
     data.distance = _deserializer.float32(buffer, bufferOffset);
     // Deserialize message field [accuracy]
@@ -90,14 +90,14 @@ class ProximityReading {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'e94f3fd8a5c15e9d20ef07fcc5fd7cf7';
+    return 'dbb137e6f965ad94062061ffcffb2bb9';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    int16 x_ratation
-    int16 y_ratation
+    int16 x_rotation
+    int16 y_rotation
     float32 distance
     float32 accuracy
     `;
@@ -109,18 +109,18 @@ class ProximityReading {
       msg = {};
     }
     const resolved = new ProximityReading(null);
-    if (msg.x_ratation !== undefined) {
-      resolved.x_ratation = msg.x_ratation;
+    if (msg.x_rotation !== undefined) {
+      resolved.x_rotation = msg.x_rotation;
     }
     else {
-      resolved.x_ratation = 0
+      resolved.x_rotation = 0
     }
 
-    if (msg.y_ratation !== undefined) {
-      resolved.y_ratation = msg.y_ratation;
+    if (msg.y_rotation !== undefined) {
+      resolved.y_rotation = msg.y_rotation;
     }
     else {
-      resolved.y_ratation = 0
+      resolved.y_rotation = 0
     }
 
     if (msg.distance !== undefined) {

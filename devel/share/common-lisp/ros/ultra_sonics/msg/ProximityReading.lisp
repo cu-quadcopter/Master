@@ -7,14 +7,14 @@
 ;//! \htmlinclude ProximityReading.msg.html
 
 (cl:defclass <ProximityReading> (roslisp-msg-protocol:ros-message)
-  ((x_ratation
-    :reader x_ratation
-    :initarg :x_ratation
+  ((x_rotation
+    :reader x_rotation
+    :initarg :x_rotation
     :type cl:fixnum
     :initform 0)
-   (y_ratation
-    :reader y_ratation
-    :initarg :y_ratation
+   (y_rotation
+    :reader y_rotation
+    :initarg :y_rotation
     :type cl:fixnum
     :initform 0)
    (distance
@@ -37,15 +37,15 @@
   (cl:unless (cl:typep m 'ProximityReading)
     (roslisp-msg-protocol:msg-deprecation-warning "using old message class name ultra_sonics-msg:<ProximityReading> is deprecated: use ultra_sonics-msg:ProximityReading instead.")))
 
-(cl:ensure-generic-function 'x_ratation-val :lambda-list '(m))
-(cl:defmethod x_ratation-val ((m <ProximityReading>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader ultra_sonics-msg:x_ratation-val is deprecated.  Use ultra_sonics-msg:x_ratation instead.")
-  (x_ratation m))
+(cl:ensure-generic-function 'x_rotation-val :lambda-list '(m))
+(cl:defmethod x_rotation-val ((m <ProximityReading>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader ultra_sonics-msg:x_rotation-val is deprecated.  Use ultra_sonics-msg:x_rotation instead.")
+  (x_rotation m))
 
-(cl:ensure-generic-function 'y_ratation-val :lambda-list '(m))
-(cl:defmethod y_ratation-val ((m <ProximityReading>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader ultra_sonics-msg:y_ratation-val is deprecated.  Use ultra_sonics-msg:y_ratation instead.")
-  (y_ratation m))
+(cl:ensure-generic-function 'y_rotation-val :lambda-list '(m))
+(cl:defmethod y_rotation-val ((m <ProximityReading>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader ultra_sonics-msg:y_rotation-val is deprecated.  Use ultra_sonics-msg:y_rotation instead.")
+  (y_rotation m))
 
 (cl:ensure-generic-function 'distance-val :lambda-list '(m))
 (cl:defmethod distance-val ((m <ProximityReading>))
@@ -58,11 +58,11 @@
   (accuracy m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <ProximityReading>) ostream)
   "Serializes a message object of type '<ProximityReading>"
-  (cl:let* ((signed (cl:slot-value msg 'x_ratation)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 65536) signed)))
+  (cl:let* ((signed (cl:slot-value msg 'x_rotation)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 65536) signed)))
     (cl:write-byte (cl:ldb (cl:byte 8 0) unsigned) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 8) unsigned) ostream)
     )
-  (cl:let* ((signed (cl:slot-value msg 'y_ratation)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 65536) signed)))
+  (cl:let* ((signed (cl:slot-value msg 'y_rotation)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 65536) signed)))
     (cl:write-byte (cl:ldb (cl:byte 8 0) unsigned) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 8) unsigned) ostream)
     )
@@ -82,11 +82,11 @@
     (cl:let ((unsigned 0))
       (cl:setf (cl:ldb (cl:byte 8 0) unsigned) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 8) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:slot-value msg 'x_ratation) (cl:if (cl:< unsigned 32768) unsigned (cl:- unsigned 65536))))
+      (cl:setf (cl:slot-value msg 'x_rotation) (cl:if (cl:< unsigned 32768) unsigned (cl:- unsigned 65536))))
     (cl:let ((unsigned 0))
       (cl:setf (cl:ldb (cl:byte 8 0) unsigned) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 8) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:slot-value msg 'y_ratation) (cl:if (cl:< unsigned 32768) unsigned (cl:- unsigned 65536))))
+      (cl:setf (cl:slot-value msg 'y_rotation) (cl:if (cl:< unsigned 32768) unsigned (cl:- unsigned 65536))))
     (cl:let ((bits 0))
       (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
@@ -109,16 +109,16 @@
   "ultra_sonics/ProximityReading")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<ProximityReading>)))
   "Returns md5sum for a message object of type '<ProximityReading>"
-  "e94f3fd8a5c15e9d20ef07fcc5fd7cf7")
+  "dbb137e6f965ad94062061ffcffb2bb9")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'ProximityReading)))
   "Returns md5sum for a message object of type 'ProximityReading"
-  "e94f3fd8a5c15e9d20ef07fcc5fd7cf7")
+  "dbb137e6f965ad94062061ffcffb2bb9")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<ProximityReading>)))
   "Returns full string definition for message of type '<ProximityReading>"
-  (cl:format cl:nil "int16 x_ratation~%int16 y_ratation~%float32 distance~%float32 accuracy~%~%"))
+  (cl:format cl:nil "int16 x_rotation~%int16 y_rotation~%float32 distance~%float32 accuracy~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'ProximityReading)))
   "Returns full string definition for message of type 'ProximityReading"
-  (cl:format cl:nil "int16 x_ratation~%int16 y_ratation~%float32 distance~%float32 accuracy~%~%"))
+  (cl:format cl:nil "int16 x_rotation~%int16 y_rotation~%float32 distance~%float32 accuracy~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <ProximityReading>))
   (cl:+ 0
      2
@@ -129,8 +129,8 @@
 (cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <ProximityReading>))
   "Converts a ROS message object to a list"
   (cl:list 'ProximityReading
-    (cl:cons ':x_ratation (x_ratation msg))
-    (cl:cons ':y_ratation (y_ratation msg))
+    (cl:cons ':x_rotation (x_rotation msg))
+    (cl:cons ':y_rotation (y_rotation msg))
     (cl:cons ':distance (distance msg))
     (cl:cons ':accuracy (accuracy msg))
 ))

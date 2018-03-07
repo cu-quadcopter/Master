@@ -24,14 +24,14 @@ struct ProximityReading_
   typedef ProximityReading_<ContainerAllocator> Type;
 
   ProximityReading_()
-    : x_ratation(0)
-    , y_ratation(0)
+    : x_rotation(0)
+    , y_rotation(0)
     , distance(0.0)
     , accuracy(0.0)  {
     }
   ProximityReading_(const ContainerAllocator& _alloc)
-    : x_ratation(0)
-    , y_ratation(0)
+    : x_rotation(0)
+    , y_rotation(0)
     , distance(0.0)
     , accuracy(0.0)  {
   (void)_alloc;
@@ -39,11 +39,11 @@ struct ProximityReading_
 
 
 
-   typedef int16_t _x_ratation_type;
-  _x_ratation_type x_ratation;
+   typedef int16_t _x_rotation_type;
+  _x_rotation_type x_rotation;
 
-   typedef int16_t _y_ratation_type;
-  _y_ratation_type y_ratation;
+   typedef int16_t _y_rotation_type;
+  _y_rotation_type y_rotation;
 
    typedef float _distance_type;
   _distance_type distance;
@@ -128,12 +128,12 @@ struct MD5Sum< ::ultra_sonics::ProximityReading_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "e94f3fd8a5c15e9d20ef07fcc5fd7cf7";
+    return "dbb137e6f965ad94062061ffcffb2bb9";
   }
 
   static const char* value(const ::ultra_sonics::ProximityReading_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xe94f3fd8a5c15e9dULL;
-  static const uint64_t static_value2 = 0x20ef07fcc5fd7cf7ULL;
+  static const uint64_t static_value1 = 0xdbb137e6f965ad94ULL;
+  static const uint64_t static_value2 = 0x062061ffcffb2bb9ULL;
 };
 
 template<class ContainerAllocator>
@@ -152,8 +152,8 @@ struct Definition< ::ultra_sonics::ProximityReading_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "int16 x_ratation\n\
-int16 y_ratation\n\
+    return "int16 x_rotation\n\
+int16 y_rotation\n\
 float32 distance\n\
 float32 accuracy\n\
 ";
@@ -174,8 +174,8 @@ namespace serialization
   {
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
-      stream.next(m.x_ratation);
-      stream.next(m.y_ratation);
+      stream.next(m.x_rotation);
+      stream.next(m.y_rotation);
       stream.next(m.distance);
       stream.next(m.accuracy);
     }
@@ -196,10 +196,10 @@ struct Printer< ::ultra_sonics::ProximityReading_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::ultra_sonics::ProximityReading_<ContainerAllocator>& v)
   {
-    s << indent << "x_ratation: ";
-    Printer<int16_t>::stream(s, indent + "  ", v.x_ratation);
-    s << indent << "y_ratation: ";
-    Printer<int16_t>::stream(s, indent + "  ", v.y_ratation);
+    s << indent << "x_rotation: ";
+    Printer<int16_t>::stream(s, indent + "  ", v.x_rotation);
+    s << indent << "y_rotation: ";
+    Printer<int16_t>::stream(s, indent + "  ", v.y_rotation);
     s << indent << "distance: ";
     Printer<float>::stream(s, indent + "  ", v.distance);
     s << indent << "accuracy: ";
