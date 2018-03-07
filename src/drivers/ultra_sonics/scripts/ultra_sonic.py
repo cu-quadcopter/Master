@@ -4,8 +4,9 @@ import rospy
 from ultra_sonics.msg import *
 
 class UltraSonicSensor:
-    def __init__(self, p, x, y):
-        self.port = p
+    def __init__(self, tp, ep, x, y):
+        self.trigger_port = tp
+        self.echo_port = ep
         self.x = x
         self.y = y
         
@@ -27,7 +28,7 @@ class UltraSonicSensor:
 
 if __name__ == '__main__':
     try:
-        sensor = UltraSonicSensor(1, 0, 0);
+        sensor = UltraSonicSensor(1, 2, 0, 0);
         sensor.scan()
     except rospy.ROSInterruptException:
         pass

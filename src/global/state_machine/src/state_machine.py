@@ -28,11 +28,17 @@ class StateMachine:
 
     def forceSwitchDirective(self, data):
         directive = Directives(data.data)
-        
-        if directive == Directives.Hover:
-            rospy.loginfo("Force Switching to hover")
-        if directive == Directives.UltraSonicScan:
-            rospy.loginfo("Force Switching to ultra sonic scan")
+        # rospy.loginfo("Received New Force Directive Change: {}".format(data.data))
+
+        if directive.value != self.activeDirective.directive.value:
+            self.activeDirective.stop()
+
+            if directive == Directives.Hover:
+                self.activeDirective = HoverDirective(Directives.Hover)
+                rospy.loginfo("Force Switching to hover")
+            if directive == Directives.UltraSonicScan:
+                self.activeDirective = UltraSonicScanDirective(Directives.UltraSonicScan)
+                rospy.loginfo("Force Switching to ultra sonic scan")
 
 
 

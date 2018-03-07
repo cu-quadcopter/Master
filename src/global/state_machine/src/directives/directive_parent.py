@@ -1,11 +1,11 @@
 import rospy
 
-class DirectiveParent:
+class DirectiveParent(object):
 	def __init__(self, directive):
 		self.directive = directive
 
 	def run(self):
 		pass
 
-	def destory(self):
+	def stop(self):
 		pass
