@@ -1,0 +1,4 @@
+global/state_machine
+/home/davidkopala/Desktop/catkin_ws/devel/.private/state_machine/lib/pkgconfig/state_machine.pc /home/davidkopala/Desktop/catkin_ws/devel/lib/pkgconfig/state_machine.pc
+/home/davidkopala/Desktop/catkin_ws/devel/.private/state_machine/share/state_machine/cmake/state_machineConfig-version.cmake /home/davidkopala/Desktop/catkin_ws/devel/share/state_machine/cmake/state_machineConfig-version.cmake
+/home/davidkopala/Desktop/catkin_ws/devel/.private/state_machine/share/state_machine/cmake/state_machineConfig.cmake /home/davidkopala/Desktop/catkin_ws/devel/share/state_machine/cmake/state_machineConfig.cmake

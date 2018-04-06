@@ -1,0 +1,4 @@
+drivers/lidars
+/home/davidkopala/Desktop/catkin_ws/devel/.private/lidars/lib/pkgconfig/lidars.pc /home/davidkopala/Desktop/catkin_ws/devel/lib/pkgconfig/lidars.pc
+/home/davidkopala/Desktop/catkin_ws/devel/.private/lidars/share/lidars/cmake/lidarsConfig-version.cmake /home/davidkopala/Desktop/catkin_ws/devel/share/lidars/cmake/lidarsConfig-version.cmake
+/home/davidkopala/Desktop/catkin_ws/devel/.private/lidars/share/lidars/cmake/lidarsConfig.cmake /home/davidkopala/Desktop/catkin_ws/devel/share/lidars/cmake/lidarsConfig.cmake

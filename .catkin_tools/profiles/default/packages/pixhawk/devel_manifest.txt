@@ -1,0 +1,4 @@
+drivers/pixhawk
+/home/davidkopala/Desktop/catkin_ws/devel/.private/pixhawk/lib/pkgconfig/pixhawk.pc /home/davidkopala/Desktop/catkin_ws/devel/lib/pkgconfig/pixhawk.pc
+/home/davidkopala/Desktop/catkin_ws/devel/.private/pixhawk/share/pixhawk/cmake/pixhawkConfig-version.cmake /home/davidkopala/Desktop/catkin_ws/devel/share/pixhawk/cmake/pixhawkConfig-version.cmake
+/home/davidkopala/Desktop/catkin_ws/devel/.private/pixhawk/share/pixhawk/cmake/pixhawkConfig.cmake /home/davidkopala/Desktop/catkin_ws/devel/share/pixhawk/cmake/pixhawkConfig.cmake
