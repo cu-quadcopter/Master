@@ -5,8 +5,8 @@ rm -rf build
 rm -rf devel
 
 echo "Download Dependencies"
-wstool update -t src
 sudo apt-get install python-wstool python-rosinstall-generator python-catkin-tools
+wstool update -t src
 
 echo "Building"
 catkin build
