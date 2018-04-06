@@ -1,7 +1,7 @@
 mavros/mavros_extras
-/home/davidkopala/Desktop/catkin_ws/devel/.private/mavros_extras/lib/libmavros_extras.so /home/davidkopala/Desktop/catkin_ws/devel/lib/libmavros_extras.so
-/home/davidkopala/Desktop/catkin_ws/devel/.private/mavros_extras/lib/mavros_extras/copter_visualization /home/davidkopala/Desktop/catkin_ws/devel/lib/mavros_extras/copter_visualization
-/home/davidkopala/Desktop/catkin_ws/devel/.private/mavros_extras/lib/mavros_extras/servo_state_publisher /home/davidkopala/Desktop/catkin_ws/devel/lib/mavros_extras/servo_state_publisher
-/home/davidkopala/Desktop/catkin_ws/devel/.private/mavros_extras/lib/pkgconfig/mavros_extras.pc /home/davidkopala/Desktop/catkin_ws/devel/lib/pkgconfig/mavros_extras.pc
-/home/davidkopala/Desktop/catkin_ws/devel/.private/mavros_extras/share/mavros_extras/cmake/mavros_extrasConfig-version.cmake /home/davidkopala/Desktop/catkin_ws/devel/share/mavros_extras/cmake/mavros_extrasConfig-version.cmake
-/home/davidkopala/Desktop/catkin_ws/devel/.private/mavros_extras/share/mavros_extras/cmake/mavros_extrasConfig.cmake /home/davidkopala/Desktop/catkin_ws/devel/share/mavros_extras/cmake/mavros_extrasConfig.cmake
+/home/davidkopala/MasterBuild/devel/.private/mavros_extras/lib/libmavros_extras.so /home/davidkopala/MasterBuild/devel/lib/libmavros_extras.so
+/home/davidkopala/MasterBuild/devel/.private/mavros_extras/lib/pkgconfig/mavros_extras.pc /home/davidkopala/MasterBuild/devel/lib/pkgconfig/mavros_extras.pc
+/home/davidkopala/MasterBuild/devel/.private/mavros_extras/lib/mavros_extras/copter_visualization /home/davidkopala/MasterBuild/devel/lib/mavros_extras/copter_visualization
+/home/davidkopala/MasterBuild/devel/.private/mavros_extras/lib/mavros_extras/servo_state_publisher /home/davidkopala/MasterBuild/devel/lib/mavros_extras/servo_state_publisher
+/home/davidkopala/MasterBuild/devel/.private/mavros_extras/share/mavros_extras/cmake/mavros_extrasConfig.cmake /home/davidkopala/MasterBuild/devel/share/mavros_extras/cmake/mavros_extrasConfig.cmake
+/home/davidkopala/MasterBuild/devel/.private/mavros_extras/share/mavros_extras/cmake/mavros_extrasConfig-version.cmake /home/davidkopala/MasterBuild/devel/share/mavros_extras/cmake/mavros_extrasConfig-version.cmake
